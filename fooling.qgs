@@ -33,7 +33,7 @@
     <projectlayers layercount="1">
         <maplayer minimumScale="1" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>somerville_trees_clean20120131000421705</id>
-            <datasource>/home/tom/projects/somerstreets/data/somerville_trees_clean.shp|layerid=0</datasource>
+            <datasource>/home/tom/projects/somertrees/data/somerville_trees_clean.shp|layerid=0</datasource>
             <layername>Somerville_trees_clean</layername>
             <srs>
                 <spatialrefsys>
