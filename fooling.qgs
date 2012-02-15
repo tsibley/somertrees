@@ -4,12 +4,12 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-71.148834</xmin>
-            <ymin>42.372752</ymin>
-            <xmax>-71.059801</xmax>
-            <ymax>42.418887</ymax>
+            <xmin>-71.150316</xmin>
+            <ymin>42.371210</ymin>
+            <xmax>-71.055548</xmax>
+            <ymax>42.420316</ymax>
         </extent>
-        <projections>0</projections>
+        <projections>1</projections>
         <destinationsrs>
             <spatialrefsys>
                 <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
@@ -24,13 +24,400 @@
         </destinationsrs>
     </mapcanvas>
     <legend>
+        <legendlayer open="true" checked="Qt::Unchecked" name="Medford_roads">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="medford_roads20120131221004874" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer open="true" checked="Qt::Unchecked" name="Arlington_roads">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="arlington_roads20120131221004855" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer open="true" checked="Qt::Unchecked" name="Cambridge_roads">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="cambridge_roads20120131221004867" visible="0"/>
+            </filegroup>
+        </legendlayer>
         <legendlayer open="true" checked="Qt::Checked" name="Somerville_trees_clean">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="somerville_trees_clean20120131000421705" visible="1"/>
             </filegroup>
         </legendlayer>
+        <legendlayer open="true" checked="Qt::Checked" name="Somerville_roads">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="somerville_roads20120131220807091" visible="1"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer open="true" checked="Qt::Checked" name="CENSUS2010TIGERROADS_ARC">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="CENSUS2010TIGERROADS_ARC20120201002222066" visible="1"/>
+            </filegroup>
+        </legendlayer>
     </legend>
-    <projectlayers layercount="1">
+    <projectlayers layercount="6">
+        <maplayer minimumScale="1" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>CENSUS2010TIGERROADS_ARC20120201002222066</id>
+            <datasource>/home/tom/projects/somertrees/data/tiger/CENSUS2010TIGERROADS_ARC.shp|layerid=0|subset=LTOWN != 'SOMERVILLE' and RTOWN != 'SOMERVILLE'</datasource>
+            <layername>CENSUS2010TIGERROADS_ARC</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs</proj4>
+                    <srsid>2357</srsid>
+                    <srid>26986</srid>
+                    <epsg>26986</epsg>
+                    <description>NAD83 / Massachusetts Mainland</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider encoding="UTF-8">ogr</provider>
+            <singlesymbol>
+                <symbol>
+                    <lowervalue></lowervalue>
+                    <uppervalue></uppervalue>
+                    <label></label>
+                    <pointsymbol>hard:circle</pointsymbol>
+                    <pointsize>2</pointsize>
+                    <pointsizeunits>pixels</pointsizeunits>
+                    <rotationclassificationfieldname></rotationclassificationfieldname>
+                    <scaleclassificationfieldname></scaleclassificationfieldname>
+                    <symbolfieldname></symbolfieldname>
+                    <outlinecolor red="234" blue="234" green="234"/>
+                    <outlinestyle>SolidLine</outlinestyle>
+                    <outlinewidth>0.26</outlinewidth>
+                    <fillcolor red="0" blue="0" green="0"/>
+                    <fillpattern>NoBrush</fillpattern>
+                    <texturepath null="1"></texturepath>
+                </symbol>
+            </singlesymbol>
+            <edittypes>
+                <edittype type="0" name="COUNTYFP"/>
+                <edittype type="0" name="DIVROAD"/>
+                <edittype type="0" name="FULLNAME"/>
+                <edittype type="0" name="LFROMADD"/>
+                <edittype type="0" name="LTOADD"/>
+                <edittype type="0" name="LTOWN"/>
+                <edittype type="0" name="L_BLKID10"/>
+                <edittype type="0" name="L_TOWNID"/>
+                <edittype type="0" name="MTFCC"/>
+                <edittype type="0" name="RFROMADD"/>
+                <edittype type="0" name="RTOADD"/>
+                <edittype type="0" name="RTOWN"/>
+                <edittype type="0" name="R_BLKID10"/>
+                <edittype type="0" name="R_TOWNID"/>
+                <edittype type="0" name="SHAPE_LEN"/>
+                <edittype type="0" name="SMID"/>
+                <edittype type="0" name="STATEFP"/>
+                <edittype type="0" name="TFIDL"/>
+                <edittype type="0" name="TFIDR"/>
+                <edittype type="0" name="TLID"/>
+                <edittype type="0" name="TNIDF"/>
+                <edittype type="0" name="TNIDT"/>
+                <edittype type="0" name="ZIPL"/>
+                <edittype type="0" name="ZIPR"/>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <displayfield>STATEFP</displayfield>
+            <label>0</label>
+            <attributeactions/>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Bitstream Vera Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+            </labelattributes>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>arlington_roads20120131221004855</id>
+            <datasource>/home/tom/projects/somertrees/data/tiger/arlington_roads.shp</datasource>
+            <layername>Arlington_roads</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs</proj4>
+                    <srsid>2357</srsid>
+                    <srid>26986</srid>
+                    <epsg>26986</epsg>
+                    <description>NAD83 / Massachusetts Mainland</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider encoding="UTF-8">ogr</provider>
+            <singlesymbol>
+                <symbol>
+                    <lowervalue></lowervalue>
+                    <uppervalue></uppervalue>
+                    <label></label>
+                    <pointsymbol>hard:circle</pointsymbol>
+                    <pointsize>2</pointsize>
+                    <pointsizeunits>pixels</pointsizeunits>
+                    <rotationclassificationfieldname></rotationclassificationfieldname>
+                    <scaleclassificationfieldname></scaleclassificationfieldname>
+                    <symbolfieldname></symbolfieldname>
+                    <outlinecolor red="189" blue="166" green="67"/>
+                    <outlinestyle>SolidLine</outlinestyle>
+                    <outlinewidth>0.26</outlinewidth>
+                    <fillcolor red="0" blue="0" green="0"/>
+                    <fillpattern>NoBrush</fillpattern>
+                    <texturepath null="1"></texturepath>
+                </symbol>
+            </singlesymbol>
+            <editform></editform>
+            <editforminit></editforminit>
+            <displayfield>STATEFP</displayfield>
+            <label>0</label>
+            <attributeactions/>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Bitstream Vera Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+            </labelattributes>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>cambridge_roads20120131221004867</id>
+            <datasource>/home/tom/projects/somertrees/data/tiger/cambridge_roads.shp</datasource>
+            <layername>Cambridge_roads</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs</proj4>
+                    <srsid>2357</srsid>
+                    <srid>26986</srid>
+                    <epsg>26986</epsg>
+                    <description>NAD83 / Massachusetts Mainland</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider encoding="UTF-8">ogr</provider>
+            <singlesymbol>
+                <symbol>
+                    <lowervalue></lowervalue>
+                    <uppervalue></uppervalue>
+                    <label></label>
+                    <pointsymbol>hard:circle</pointsymbol>
+                    <pointsize>2</pointsize>
+                    <pointsizeunits>pixels</pointsizeunits>
+                    <rotationclassificationfieldname></rotationclassificationfieldname>
+                    <scaleclassificationfieldname></scaleclassificationfieldname>
+                    <symbolfieldname></symbolfieldname>
+                    <outlinecolor red="141" blue="175" green="235"/>
+                    <outlinestyle>SolidLine</outlinestyle>
+                    <outlinewidth>0.26</outlinewidth>
+                    <fillcolor red="0" blue="0" green="0"/>
+                    <fillpattern>NoBrush</fillpattern>
+                    <texturepath null="1"></texturepath>
+                </symbol>
+            </singlesymbol>
+            <editform></editform>
+            <editforminit></editforminit>
+            <displayfield>STATEFP</displayfield>
+            <label>0</label>
+            <attributeactions/>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Bitstream Vera Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+            </labelattributes>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>medford_roads20120131221004874</id>
+            <datasource>/home/tom/projects/somertrees/data/tiger/medford_roads.shp</datasource>
+            <layername>Medford_roads</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs</proj4>
+                    <srsid>2357</srsid>
+                    <srid>26986</srid>
+                    <epsg>26986</epsg>
+                    <description>NAD83 / Massachusetts Mainland</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider encoding="UTF-8">ogr</provider>
+            <singlesymbol>
+                <symbol>
+                    <lowervalue></lowervalue>
+                    <uppervalue></uppervalue>
+                    <label></label>
+                    <pointsymbol>hard:circle</pointsymbol>
+                    <pointsize>2</pointsize>
+                    <pointsizeunits>pixels</pointsizeunits>
+                    <rotationclassificationfieldname></rotationclassificationfieldname>
+                    <scaleclassificationfieldname></scaleclassificationfieldname>
+                    <symbolfieldname></symbolfieldname>
+                    <outlinecolor red="207" blue="80" green="178"/>
+                    <outlinestyle>SolidLine</outlinestyle>
+                    <outlinewidth>0.26</outlinewidth>
+                    <fillcolor red="0" blue="0" green="0"/>
+                    <fillpattern>NoBrush</fillpattern>
+                    <texturepath null="1"></texturepath>
+                </symbol>
+            </singlesymbol>
+            <editform></editform>
+            <editforminit></editforminit>
+            <displayfield>STATEFP</displayfield>
+            <label>0</label>
+            <attributeactions/>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Bitstream Vera Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+            </labelattributes>
+        </maplayer>
+        <maplayer minimumScale="1" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>somerville_roads20120131220807091</id>
+            <datasource>/home/tom/projects/somertrees/data/tiger/somerville_roads.shp|layerid=0|subset=LTOWN = 'SOMERVILLE' and RTOWN = 'SOMERVILLE'</datasource>
+            <layername>Somerville_roads</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs</proj4>
+                    <srsid>2357</srsid>
+                    <srid>26986</srid>
+                    <epsg>26986</epsg>
+                    <description>NAD83 / Massachusetts Mainland</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider encoding="UTF-8">ogr</provider>
+            <singlesymbol>
+                <symbol>
+                    <lowervalue></lowervalue>
+                    <uppervalue></uppervalue>
+                    <label></label>
+                    <pointsymbol>hard:circle</pointsymbol>
+                    <pointsize>2</pointsize>
+                    <pointsizeunits>pixels</pointsizeunits>
+                    <rotationclassificationfieldname></rotationclassificationfieldname>
+                    <scaleclassificationfieldname></scaleclassificationfieldname>
+                    <symbolfieldname></symbolfieldname>
+                    <outlinecolor red="194" blue="194" green="194"/>
+                    <outlinestyle>SolidLine</outlinestyle>
+                    <outlinewidth>0.26</outlinewidth>
+                    <fillcolor red="0" blue="0" green="0"/>
+                    <fillpattern>NoBrush</fillpattern>
+                    <texturepath null="1"></texturepath>
+                </symbol>
+            </singlesymbol>
+            <edittypes>
+                <edittype type="0" name="COUNTYFP"/>
+                <edittype type="0" name="DIVROAD"/>
+                <edittype type="0" name="FULLNAME"/>
+                <edittype type="0" name="LFROMADD"/>
+                <edittype type="0" name="LTOADD"/>
+                <edittype type="0" name="LTOWN"/>
+                <edittype type="0" name="L_BLKID10"/>
+                <edittype type="0" name="L_TOWNID"/>
+                <edittype type="0" name="MTFCC"/>
+                <edittype type="0" name="RFROMADD"/>
+                <edittype type="0" name="RTOADD"/>
+                <edittype type="0" name="RTOWN"/>
+                <edittype type="0" name="R_BLKID10"/>
+                <edittype type="0" name="R_TOWNID"/>
+                <edittype type="0" name="SHAPE_LEN"/>
+                <edittype type="0" name="SMID"/>
+                <edittype type="0" name="STATEFP"/>
+                <edittype type="0" name="TFIDL"/>
+                <edittype type="0" name="TFIDR"/>
+                <edittype type="0" name="TLID"/>
+                <edittype type="0" name="TNIDF"/>
+                <edittype type="0" name="TNIDT"/>
+                <edittype type="0" name="ZIPL"/>
+                <edittype type="0" name="ZIPR"/>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <displayfield>STATEFP</displayfield>
+            <label>0</label>
+            <attributeactions/>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Bitstream Vera Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+            </labelattributes>
+        </maplayer>
         <maplayer minimumScale="1" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>somerville_trees_clean20120131000421705</id>
             <datasource>/home/tom/projects/somertrees/data/somerville_trees_clean.shp|layerid=0</datasource>
@@ -47,63 +434,41 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
+            <transparencyLevelInt>177</transparencyLevelInt>
             <customproperties/>
             <provider encoding="UTF-8">ogr</provider>
             <renderer-v2 attr="DBH_int" symbollevels="1" type="graduatedSymbol">
                 <ranges>
-                    <range symbol="0" lower="0" upper="7" label="0.0000 - 7.0000"/>
-                    <range symbol="1" lower="7" upper="12" label="7.0000 - 12.0000"/>
-                    <range symbol="2" lower="12" upper="60" label="12.0000 - 60.0000"/>
+                    <range symbol="0" lower="0" upper="7" label="0.000 - 7.000"/>
+                    <range symbol="1" lower="7" upper="16" label="7.000 - 16.000"/>
+                    <range symbol="2" lower="16" upper="60" label="16.000 - 60.000"/>
                 </ranges>
                 <symbols>
                     <symbol type="marker" name="0">
-                        <layer pass="3" class="SimpleMarker" locked="0">
+                        <layer pass="0" class="SvgMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="85,170,0"/>
-                            <prop k="color_border" v="255,255,255"/>
-                            <prop k="name" v="circle"/>
+                            <prop k="name" v="/gpsicons/point.svg"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="5"/>
+                            <prop k="size" v="14"/>
                         </layer>
                     </symbol>
                     <symbol type="marker" name="1">
-                        <layer pass="2" class="SimpleMarker" locked="0">
+                        <layer pass="0" class="SvgMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="42,127,0"/>
-                            <prop k="color_border" v="255,255,255"/>
-                            <prop k="name" v="circle"/>
+                            <prop k="name" v="/gpsicons/point.svg"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="5"/>
+                            <prop k="size" v="32"/>
                         </layer>
                     </symbol>
                     <symbol type="marker" name="2">
-                        <layer pass="1" class="SimpleMarker" locked="0">
+                        <layer pass="0" class="SvgMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="0,85,0"/>
-                            <prop k="color_border" v="255,255,255"/>
-                            <prop k="name" v="circle"/>
+                            <prop k="name" v="/gpsicons/point.svg"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="5"/>
+                            <prop k="size" v="60"/>
                         </layer>
                     </symbol>
                 </symbols>
-                <source-symbol>
-                    <symbol type="marker" name="0">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="0,85,0"/>
-                            <prop k="color_border" v="255,255,255"/>
-                            <prop k="name" v="circle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                </source-symbol>
-                <colorramp type="gradient" name="[source]">
-                    <prop k="color1" v="85,170,0"/>
-                    <prop k="color2" v="0,85,0"/>
-                </colorramp>
             </renderer-v2>
             <edittypes>
                 <edittype type="0" name="Address"/>
@@ -146,6 +511,13 @@
         </maplayer>
     </projectlayers>
     <properties>
+        <Identify>
+            <disabledLayers type="QStringList"/>
+        </Identify>
+        <SpatialRefSys>
+            <ProjectCRSProj4String type="QString">+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</ProjectCRSProj4String>
+            <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+        </SpatialRefSys>
         <Gui>
             <SelectionColorBluePart type="int">0</SelectionColorBluePart>
             <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
@@ -154,6 +526,13 @@
             <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
             <CanvasColorBluePart type="int">255</CanvasColorBluePart>
         </Gui>
+        <Paths>
+            <Absolute type="bool">true</Absolute>
+        </Paths>
+        <Digitizing>
+            <AvoidIntersectionsList type="QStringList"/>
+            <TopologicalEditing type="int">0</TopologicalEditing>
+        </Digitizing>
         <PositionPrecision>
             <DecimalPlaces type="int">2</DecimalPlaces>
             <Automatic type="bool">true</Automatic>
