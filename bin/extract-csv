@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use 5.14.0;
 use utf8;
+use open qw[ :encoding(UTF-8) :std ];
 
 use HTML::TableExtract;
 use Text::CSV;
@@ -23,8 +24,17 @@ my $csv = Text::CSV->new({
 my $fh = \*STDOUT;
 binmode $fh, ':utf8';
 
+my @header = $table->row(0);
+my %column = map { $header[$_] => $_ } 0 .. $#header;
+
 for my $row ($table->rows) {
     last if $row->[0] eq 'Total';
+
+    unless ($row->[ $column{'X-Coord'} ] eq 'X-Coord') {
+        # feet → meters
+        $row->[ $column{'X-Coord'} ] *= 0.3048;
+        $row->[ $column{'Y-Coord'} ] *= 0.3048;
+    }
 
     $csv->print($fh, [ map {
             if (defined) {
