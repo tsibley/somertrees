@@ -1,0 +1,11 @@
+322322  mv somerstreets/ somertrees
+322323  cd somertrees/
+322398  cd projects/somertrees/
+322410  pg_dump -Fp somertrees >dump.sql
+322412  pg_dump -C -Fp somertrees >dump.sql
+322421  cd projects/somertrees/
+322423  createdb -T template_postgis somertrees
+322429  shp2pgsql -s 4326 data/somerville_trees.shp | psql somertrees
+322434  psql somertrees 
+326180  h somertrees
+326181  h somertrees > postgis-commands
