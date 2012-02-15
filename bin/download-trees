@@ -6,6 +6,7 @@ use 5.14.0;
 use Data::Dumper;
 use WWW::Mechanize;
 
+my $data = 'data/treekeeper';
 my $base = 'http://www.daveytreekeeper.com/mass/MI_Somerville';
 
 my $m = WWW::Mechanize->new( cookie_jar => {} );
@@ -39,5 +40,5 @@ for my $where (qw(street park)) {
     $m->click_button(value => 'Select');
     $m->timeout( 10 * 60 ); # 10 min
     $m->click_button(value => 'Display all');
-    $m->save_content("tree-export-$where");
+    $m->save_content("$data/${where}s.html");
 }
