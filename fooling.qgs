@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-71.150316</xmin>
-            <ymin>42.371210</ymin>
-            <xmax>-71.055548</xmax>
-            <ymax>42.420316</ymax>
+            <xmin>-71.132454</xmin>
+            <ymin>42.409723</ymin>
+            <xmax>-71.127761</xmax>
+            <ymax>42.412155</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -91,7 +91,7 @@
                     <outlinewidth>0.26</outlinewidth>
                     <fillcolor red="0" blue="0" green="0"/>
                     <fillpattern>NoBrush</fillpattern>
-                    <texturepath null="1"></texturepath>
+                    <texturepath></texturepath>
                 </symbol>
             </singlesymbol>
             <edittypes>
@@ -179,7 +179,7 @@
                     <outlinewidth>0.26</outlinewidth>
                     <fillcolor red="0" blue="0" green="0"/>
                     <fillpattern>NoBrush</fillpattern>
-                    <texturepath null="1"></texturepath>
+                    <texturepath></texturepath>
                 </symbol>
             </singlesymbol>
             <editform></editform>
@@ -241,7 +241,7 @@
                     <outlinewidth>0.26</outlinewidth>
                     <fillcolor red="0" blue="0" green="0"/>
                     <fillpattern>NoBrush</fillpattern>
-                    <texturepath null="1"></texturepath>
+                    <texturepath></texturepath>
                 </symbol>
             </singlesymbol>
             <editform></editform>
@@ -303,7 +303,7 @@
                     <outlinewidth>0.26</outlinewidth>
                     <fillcolor red="0" blue="0" green="0"/>
                     <fillpattern>NoBrush</fillpattern>
-                    <texturepath null="1"></texturepath>
+                    <texturepath></texturepath>
                 </symbol>
             </singlesymbol>
             <editform></editform>
@@ -365,7 +365,7 @@
                     <outlinewidth>0.26</outlinewidth>
                     <fillcolor red="0" blue="0" green="0"/>
                     <fillpattern>NoBrush</fillpattern>
-                    <texturepath null="1"></texturepath>
+                    <texturepath></texturepath>
                 </symbol>
             </singlesymbol>
             <edittypes>
@@ -434,41 +434,63 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>177</transparencyLevelInt>
+            <transparencyLevelInt>255</transparencyLevelInt>
             <customproperties/>
             <provider encoding="UTF-8">ogr</provider>
-            <renderer-v2 attr="DBH_int" symbollevels="1" type="graduatedSymbol">
+            <renderer-v2 attr="DBH_int" symbollevels="0" type="graduatedSymbol">
                 <ranges>
-                    <range symbol="0" lower="0" upper="7" label="0.000 - 7.000"/>
-                    <range symbol="1" lower="7" upper="16" label="7.000 - 16.000"/>
-                    <range symbol="2" lower="16" upper="60" label="16.000 - 60.000"/>
+                    <range symbol="0" lower="0" upper="7" label="0.0000 - 7.0000"/>
+                    <range symbol="1" lower="7" upper="12" label="7.0000 - 12.0000"/>
+                    <range symbol="2" lower="12" upper="60" label="12.0000 - 60.0000"/>
                 </ranges>
                 <symbols>
                     <symbol type="marker" name="0">
-                        <layer pass="0" class="SvgMarker" locked="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="name" v="/gpsicons/point.svg"/>
+                            <prop k="color" v="85,170,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="14"/>
+                            <prop k="size" v="4"/>
                         </layer>
                     </symbol>
                     <symbol type="marker" name="1">
-                        <layer pass="0" class="SvgMarker" locked="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="name" v="/gpsicons/point.svg"/>
+                            <prop k="color" v="42,127,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="32"/>
+                            <prop k="size" v="4"/>
                         </layer>
                     </symbol>
                     <symbol type="marker" name="2">
-                        <layer pass="0" class="SvgMarker" locked="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="name" v="/gpsicons/point.svg"/>
+                            <prop k="color" v="0,85,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="60"/>
+                            <prop k="size" v="4"/>
                         </layer>
                     </symbol>
                 </symbols>
+                <source-symbol>
+                    <symbol type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="0,85,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="4"/>
+                        </layer>
+                    </symbol>
+                </source-symbol>
+                <colorramp type="gradient" name="[source]">
+                    <prop k="color1" v="85,170,0"/>
+                    <prop k="color2" v="0,85,0"/>
+                </colorramp>
             </renderer-v2>
             <edittypes>
                 <edittype type="0" name="Address"/>
