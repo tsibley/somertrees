@@ -1,0 +1,36 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use 5.14.0;
+use utf8;
+
+use HTML::TableExtract;
+use Text::CSV;
+
+my $html = HTML::TableExtract->new( depth => 0, count => 0 );
+$html->parse_file(*STDIN);
+
+my $table = $html->first_table_found
+    or die "No tables‽\n";
+
+my $csv = Text::CSV->new({
+    binary      => 1,
+    sep_char    => ",",
+    quote_space => 0,
+    eol         => "\n"
+});
+
+my $fh = \*STDOUT;
+binmode $fh, ':utf8';
+
+for my $row ($table->rows) {
+    last if $row->[0] eq 'Total';
+
+    $csv->print($fh, [ map {
+            if (defined) {
+                s/[\t\r\n]/ /g;
+                s/(?:^\s*|\s*$)//g;
+            }
+            $_
+        } @$row ]);
+}
