@@ -1,0 +1,22 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use 5.14.0;
+use utf8;
+
+use HTML::TableExtract;
+
+my $html = HTML::TableExtract->new( depth => 0, count => 0 );
+$html->parse_file(*STDIN);
+
+my $table = $html->first_table_found
+    or die "No tables‽\n";
+
+for my $row ($table->rows) {
+    last if $row->[0] eq 'Total';
+
+    say join "\t", map {
+        s/[\t\r\n]/ /g if $_;
+        $_
+    } @$row;
+}

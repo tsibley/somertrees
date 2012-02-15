@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use 5.14.0;
+
+use Data::Dumper;
+use WWW::Mechanize;
+
+my $base = 'http://www.daveytreekeeper.com/mass/MI_Somerville';
+
+my $m = WWW::Mechanize->new( cookie_jar => {} );
+$m->get("$base/");
+
+if ($m->content =~ /"public"\s*\+\s*(\d+)/) {
+    $m->submit_form(
+        with_fields => {
+            nameFld          => "public$1",
+            pwFld            => "public$1",
+            DataExchangeOnly => 'N',
+            screenWidth      => '800',
+            screenHeight     => '600',
+        },
+    );
+} else {
+    die "Can't find public credentials!\n\n", $m->content, "\n";
+}
+
+my %id = (
+    street  => 1,
+    park    => 2,
+);
+
+for my $where (qw(street park)) {
+    $m->get("$base/Prefs_setpref.cfm?selectRad=$id{$where}");
+    $m->get("$base/site_form_new.cfm?action=report");
+    $m->click_button(value => 'Find Sites');
+    $_->check
+        for $m->find_all_inputs(type => 'checkbox');
+    $m->click_button(value => 'Select');
+    $m->timeout( 10 * 60 ); # 10 min
+    $m->click_button(value => 'Display all');
+    $m->save_content("tree-export-$where");
+}
