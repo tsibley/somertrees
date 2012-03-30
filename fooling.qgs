@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-71.132454</xmin>
-            <ymin>42.409723</ymin>
-            <xmax>-71.127761</xmax>
-            <ymax>42.412155</ymax>
+            <xmin>-71.150421</xmin>
+            <ymin>42.372848</ymin>
+            <xmax>-71.061387</xmax>
+            <ymax>42.418983</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -44,6 +44,11 @@
                 <legendlayerfile isInOverview="0" layerid="somerville_trees_clean20120131000421705" visible="1"/>
             </filegroup>
         </legendlayer>
+        <legendlayer open="true" checked="Qt::Checked" name="Parks">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="parks20120215024316306" visible="1"/>
+            </filegroup>
+        </legendlayer>
         <legendlayer open="true" checked="Qt::Checked" name="Somerville_roads">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="somerville_roads20120131220807091" visible="1"/>
@@ -55,7 +60,7 @@
             </filegroup>
         </legendlayer>
     </legend>
-    <projectlayers layercount="6">
+    <projectlayers layercount="7">
         <maplayer minimumScale="1" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>CENSUS2010TIGERROADS_ARC20120201002222066</id>
             <datasource>/home/tom/projects/somertrees/data/tiger/CENSUS2010TIGERROADS_ARC.shp|layerid=0|subset=LTOWN != 'SOMERVILLE' and RTOWN != 'SOMERVILLE'</datasource>
@@ -309,6 +314,140 @@
             <editform></editform>
             <editforminit></editforminit>
             <displayfield>STATEFP</displayfield>
+            <label>0</label>
+            <attributeactions/>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Bitstream Vera Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+            </labelattributes>
+        </maplayer>
+        <maplayer minimumScale="1" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>parks20120215024316306</id>
+            <datasource>/home/tom/projects/somertrees/data/treekeeper/parks.sqlite|layerid=0</datasource>
+            <layername>Parks</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs</proj4>
+                    <srsid>2357</srsid>
+                    <srid>26986</srid>
+                    <epsg>26986</epsg>
+                    <description>NAD83 / Massachusetts Mainland</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider encoding="UTF-8">ogr</provider>
+            <renderer-v2 attr="dbh" symbollevels="0" type="graduatedSymbol">
+                <ranges>
+                    <range symbol="0" lower="0" upper="7" label="0.0000 - 7.0000"/>
+                    <range symbol="1" lower="7" upper="12" label="7.0000 - 12.0000"/>
+                    <range symbol="2" lower="12" upper="60" label="12.0000 - 60.0000"/>
+                </ranges>
+                <symbols>
+                    <symbol type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="85,170,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="4"/>
+                        </layer>
+                    </symbol>
+                    <symbol type="marker" name="1">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="42,127,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="4"/>
+                        </layer>
+                    </symbol>
+                    <symbol type="marker" name="2">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="0,85,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="4"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <source-symbol>
+                    <symbol type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="0,85,0"/>
+                            <prop k="color_border" v="255,255,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="4"/>
+                        </layer>
+                    </symbol>
+                </source-symbol>
+                <colorramp type="gradient" name="[source]">
+                    <prop k="color1" v="85,170,0"/>
+                    <prop k="color2" v="0,85,0"/>
+                </colorramp>
+            </renderer-v2>
+            <edittypes>
+                <edittype type="0" name="added"/>
+                <edittype type="0" name="area"/>
+                <edittype type="0" name="cavity?"/>
+                <edittype type="0" name="changed"/>
+                <edittype type="0" name="changedby"/>
+                <edittype type="0" name="clean"/>
+                <edittype type="0" name="condition"/>
+                <edittype type="0" name="consult"/>
+                <edittype type="0" name="damage"/>
+                <edittype type="0" name="dbh"/>
+                <edittype type="0" name="facility"/>
+                <edittype type="0" name="fail_prob"/>
+                <edittype type="0" name="further"/>
+                <edittype type="0" name="gnd_maint"/>
+                <edittype type="0" name="hazard"/>
+                <edittype type="0" name="impact"/>
+                <edittype type="0" name="loc_value"/>
+                <edittype type="0" name="maint"/>
+                <edittype type="0" name="other"/>
+                <edittype type="0" name="pct_dead"/>
+                <edittype type="0" name="place"/>
+                <edittype type="0" name="plant_loc"/>
+                <edittype type="0" name="raise"/>
+                <edittype type="0" name="reduce"/>
+                <edittype type="0" name="site"/>
+                <edittype type="0" name="site_id"/>
+                <edittype type="0" name="species"/>
+                <edittype type="0" name="staff"/>
+                <edittype type="0" name="trunks"/>
+                <edittype type="0" name="uid"/>
+                <edittype type="0" name="utilities"/>
+                <edittype type="0" name="weak_fork"/>
+                <edittype type="0" name="x"/>
+                <edittype type="0" name="y"/>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <displayfield>uid</displayfield>
             <label>0</label>
             <attributeactions/>
             <labelattributes>
