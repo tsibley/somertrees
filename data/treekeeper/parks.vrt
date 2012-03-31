@@ -21,7 +21,7 @@
                 PARAMETER["scale_factor",1.0]]
         </LayerSRS>
         <GeometryField encoding="PointFromColumns" x="X-Coord" y="Y-Coord" />
-        <!-- XXX TODO FIELD MAPPING for proper types -->
+        <!-- field map for proper types -->
         <Field src="Facility" name="place" type="String" />
         <Field src="Facility Name" name="facility" type="String" />
         <Field src="Site" name="site" type="Integer" />
@@ -36,11 +36,11 @@
         <Field src="DBH" name="dbh" type="Integer" />
         <Field src="Trunks" name="trunks" type="Integer" />
         <Field src="Condition" name="condition" type="String" />
-        <Field src="Cavity Present" name="cavity?" type="String" />
+        <Field src="Cavity Present" name="cavity" type="String" />
         <Field src="Weak Fork" name="weak_fork" type="String" />
         <Field src="Percentage of Dead Wood" name="pct_dead" type="String" />
         <Field src="Size of Existing Defect" name="damage" type="String" />
-        <Field src="Hazard Rating" name="hazard" type="String" />
+        <Field src="Hazard Rating" name="hazard_rating" type="Integer" />
         <Field src="Probability of Failure" name="fail_prob" type="String" />
         <Field src="Target Impact" name="impact" type="String" />
         <Field src="Maintenance" name="maint" type="String" />
