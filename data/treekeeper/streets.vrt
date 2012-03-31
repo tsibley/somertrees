@@ -1,0 +1,61 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="streets">
+        <SrcDataSource relativeToVRT="1">streets.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <!-- stolen from `ogrinfo -al -so -ro data/tiger/somerville_roads.shp` and modified for feet -->
+        <LayerSRS>
+            PROJCS["NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001",
+                GEOGCS["GCS_North_American_1983",
+                    DATUM["North_American_Datum_1983",
+                        SPHEROID["GRS_1980",6378137.0,298.257222101]],
+                    PRIMEM["Greenwich",0.0],
+                    UNIT["Degree",0.017453292519943295]],
+                PROJECTION["Lambert_Conformal_Conic_2SP"],
+                PARAMETER["False_Easting",200000.0],
+                PARAMETER["False_Northing",750000.0],
+                PARAMETER["Central_Meridian",-71.5],
+                PARAMETER["Standard_Parallel_1",41.71666666666667],
+                PARAMETER["Standard_Parallel_2",42.68333333333333],
+                PARAMETER["Latitude_Of_Origin",41.0],
+                UNIT["Meter",1.0],
+                PARAMETER["scale_factor",1.0]]
+        </LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="X-Coord" y="Y-Coord" />
+        <!-- field mapping for proper types -->
+        <Field src="Address" name="address" type="String" />
+        <Field src="Area" name="area" type="Integer" />
+        <Field src="Cavity Present" name="cavity_present" type="String" />
+        <Field src="Change Date" name="change_date" type="Date" />
+        <Field src="Clean" name="clean" type="String" />
+        <Field src="Condition" name="condition" type="String" />
+        <Field src="Consult" name="consult" type="String" />
+        <Field src="DBH" name="dbh" type="Integer" />
+        <Field src="From Street" name="from_street" type="String" />
+        <Field src="Further Inspection" name="further_inspection" type="String" />
+        <Field src="Ground Maintenance" name="ground_maintenance" type="String" />
+        <Field src="Hazard Rating" name="hazard_rating" type="Integer" />
+        <Field src="Inventory Date" name="inventory_date" type="Date" />
+        <Field src="Last Changed By" name="last_changed_by" type="String" />
+        <Field src="Location Value" name="location_value" type="String" />
+        <Field src="Maintenance" name="maintenance" type="String" />
+        <Field src="On Street" name="on_street" type="String" />
+        <Field src="Other" name="other" type="String" />
+        <Field src="Percentage of Dead Wood" name="percentage_of_dead_wood" type="String" />
+        <Field src="Plant Location" name="plant_location" type="String" />
+        <Field src="Probability of Failure" name="probability_of_failure" type="String" />
+        <Field src="Raise" name="raise" type="String" />
+        <Field src="Reduce" name="reduce" type="String" />
+        <Field src="Site ID" name="site" type="Integer" />
+        <Field src="Size of Existing Defect" name="size_of_existing_defect" type="String" />
+        <Field src="Species" name="species" type="String" />
+        <Field src="Staff" name="staff" type="String" />
+        <Field src="Target Impact" name="target_impact" type="String" />
+        <Field src="To Street" name="to_street" type="String" />
+        <Field src="Trunks" name="trunks" type="Integer" />
+        <Field src="UniqueID" name="uid" type="Integer" />
+        <Field src="Utilities Present" name="utilities_present" type="String" />
+        <Field src="Weak Fork" name="weak_fork" type="String" />
+        <Field src="X-Coord" name="x-coord" type="Real" />
+        <Field src="Y-Coord" name="y-coord" type="Real" />
+    </OGRVRTLayer>
+</OGRVRTDataSource>
