@@ -1,0 +1,21 @@
+## Somerville trees
+
+* convert parks and streets to JSON
+* clean up data
+* convert basic map of Somerville (streets?) to svg with kartograph.py -- kartograph can't do this!
+* add trees with symbols on top
+
+### Features
+
+Map on left, data values on right
+
+* Filter by street (one or many)
+* Filter by park
+    - symbolize parks differently?  light green background?
+* Filter by genus/species
+* Clickable dots to get more info
+    - deal with overlap
+* Stats for a street/park
+* Show "Top 12" of min/max of various columns
+    - DBH = smallest/largest
+    - other columns?
