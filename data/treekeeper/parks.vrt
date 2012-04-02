@@ -2,7 +2,8 @@
     <OGRVRTLayer name="parks">
         <SrcDataSource relativeToVRT="1">parks.csv</SrcDataSource>
         <GeometryType>wkbPoint</GeometryType>
-        <!-- stolen from `ogrinfo -al -so -ro data/tiger/somerville_roads.shp` and modified for feet -->
+        <!-- stolen from `ogrinfo -al -so -ro data/tiger/somerville_roads.shp` -->
+        <!-- ESRI:102286 (http://spatialreference.org/ref/esri/102286/) -->
         <LayerSRS>
             PROJCS["NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001",
                 GEOGCS["GCS_North_American_1983",
