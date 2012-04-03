@@ -3,7 +3,7 @@
         <SrcDataSource relativeToVRT="1">streets.csv</SrcDataSource>
         <GeometryType>wkbPoint</GeometryType>
         <!-- stolen from `ogrinfo -al -so -ro data/tiger/somerville_roads.shp` -->
-        <!-- ESRI:102286 (http://spatialreference.org/ref/esri/102286/) -->
+        <!-- the following is EPSG:26986 (or maybe ESRI:102286?); spatialreference.org is unclear -->
         <LayerSRS>
             PROJCS["NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001",
                 GEOGCS["GCS_North_American_1983",
